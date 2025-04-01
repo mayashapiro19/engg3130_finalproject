@@ -1,4 +1,7 @@
 import pandas as pd
+import numpy as np
 
-df = pd.read_excel('AirplaneData.xlsx')
-print(df.head())
+plane = pd.read_excel('AirplaneData.xlsx')
+
+plane["Total Seats"] = plane["Business Seats"] + plane["Economy Seats"]
+print(plane.head())
